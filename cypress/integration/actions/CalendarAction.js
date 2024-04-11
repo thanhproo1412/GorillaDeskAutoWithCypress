@@ -32,11 +32,12 @@ class CalendarAction {
         calendarPage.getServiceInList(jobData.service).click()
 
         //select date
-        calendarPage.getInputDate().type(jobData.date)
+        calendarPage.getInputDate().clear().type(jobData.date)
 
         //click save
         calendarPage.getBtnSave().click()
 
+        calendarPage.getLoaddingAnimation().should('exist')
         calendarPage.getLoaddingAnimation().should('not.exist')
 
         //click close
