@@ -1,5 +1,6 @@
 class LoginPage {
 
+  
   getListAgendaBtn() {
     return cy.get('div[class="v2-dropdown list-agenda"]');
   }
@@ -24,6 +25,7 @@ class LoginPage {
     return cy.get('div[class="wrap-addjob-menu__items"]').contains(addJobType);
   }
 
+  //--------------------- Job Detail ---------------------------------
   //Get Customer
   getSearchCustomer() {
     return cy.get('div[id="show_list_customer_dropdown"] input[placeholder="Search Customers"]');
