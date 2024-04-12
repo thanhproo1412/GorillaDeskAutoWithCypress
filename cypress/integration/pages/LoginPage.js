@@ -1,4 +1,4 @@
-class LoginPage {
+export default class LoginPage {
 
   //Basic Auth
   getInputUsername() {
@@ -15,5 +15,3 @@ class LoginPage {
 
 
 }
-
-export default LoginPage;

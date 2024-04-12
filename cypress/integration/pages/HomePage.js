@@ -1,4 +1,4 @@
-class HomePage {
+export default class HomePage {
 
 
   //Basic Auth btn
@@ -22,5 +22,3 @@ class HomePage {
   }
 
 }
-
-export default HomePage;
