@@ -1,8 +1,9 @@
 import CalendarPage from '../pages/CalendarPage.js'
+import getMonthName from '../function/GetMonthName.js'
 
 const calendarPage = new CalendarPage()
 
-class CalendarAction {
+export default class CalendarAction {
 
     // action: verify the content text in ABTestingPage
     selectAgendar(agendaType) {
@@ -16,6 +17,32 @@ class CalendarAction {
             force: true
         })
         calendarPage.getAddJob(jobType).click()
+    }
+
+    selectDate(date) {
+
+        const newDate = new Date(date)
+        const month = getMonthName(newDate)
+        const year = newDate.getFullYear()
+        const d = newDate.getDate()
+        cy.log(year)
+        cy.log(d)
+
+        //click to open input Date modal
+        calendarPage.getInputDate().click()
+
+        //select month
+        calendarPage.getSelectMonth().click()
+        calendarPage.getSelectMonthList().contains(month).click()
+
+        //select year
+        calendarPage.getSelectYear().click()
+        calendarPage.getSelectYearList().contains(year).click()
+
+        //select date
+        calendarPage.getSelectDateList().contains(d).click()
+        cy.wait(500)
+
     }
 
     addJob(jobData) {
@@ -32,7 +59,8 @@ class CalendarAction {
         calendarPage.getServiceInList(jobData.service).click()
 
         //select date
-        calendarPage.getInputDate().clear().type(jobData.date)
+        // calendarPage.getInputDate().clear().type(jobData.date)
+        this.selectDate(jobData.date)
 
         //click save
         calendarPage.getBtnSave().click()
@@ -46,5 +74,3 @@ class CalendarAction {
     }
 
 }
-
-export default CalendarAction;

@@ -1,6 +1,6 @@
 class LoginPage {
 
-  
+
   getListAgendaBtn() {
     return cy.get('div[class="v2-dropdown list-agenda"]');
   }
@@ -61,9 +61,26 @@ class LoginPage {
   }
 
 
+  //Get input date
   getInputDate() {
     return cy.get('div[class="react-datepicker-wrapper"] input');
   }
+  getSelectMonth() {
+    return cy.get('div[class="datepicker-header-custom__option --month"]');
+  }
+  getSelectMonthList() {
+    return cy.get('div[class="datepicker-header-custom__option --month"] ul');
+  }
+  getSelectYear() {
+    return cy.get('div[class="datepicker-header-custom__option --year"]');
+  }
+  getSelectYearList() {
+    return cy.get('div[class="datepicker-header-custom__option --year"] ul');
+  }
+  getSelectDateList() {
+    return cy.get('div[id="show_date_picker"] [class="react-datepicker__month"]');
+  }
+
 
   //Btn Save
   getBtnSave() {

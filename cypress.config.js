@@ -3,6 +3,10 @@ const {
 } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: "4juorn",
+  viewportWidth: 1920,
+  viewportHeight: 1080,
+  
   component: {
     devServer: {
       framework: "create-react-app",
