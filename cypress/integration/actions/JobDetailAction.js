@@ -26,6 +26,12 @@ export default class JobDetailAction {
         // jobDetailPage.getInputDate().clear().type(jobData.date)
         this.selectDate(jobData.date)
 
+        //select job length
+        jobDetailPage.getInputLengthHoursBtn().click()
+        jobDetailPage.getInputLengthHoursList().contains(jobData.lengthHours).click()
+        jobDetailPage.getInputLengthMinutesBtn().click()
+        jobDetailPage.getInputLengthMinutesList().contains(jobData.lengthMinutes).click()
+
         //click save
         jobDetailPage.getBtnSave().click()
 

@@ -1,6 +1,6 @@
 export default class JobDetailPage {
 
-    
+
     //--------------------- Job Detail ---------------------------------
     //Get Customer
     getSearchCustomer() {
@@ -56,6 +56,22 @@ export default class JobDetailPage {
     getSelectDateList() {
         return cy.get('div[id="show_date_picker"] [class="react-datepicker__month-container"] div[class="react-datepicker__month"]');
     }
+
+
+    //Get Input Length
+    getInputLengthHoursBtn() {
+        return cy.get('div[class="field-length"] div[class="from-time"]').eq(0)
+    }
+    getInputLengthHoursList() {
+        return cy.get('div[class="field-length"] div[class="from-time"]').eq(0).find('div[id="show_list_option_select_hour"]')
+    }
+    getInputLengthMinutesBtn() {
+        return cy.get('div[class="field-length"] div[class="from-time"]').eq(1)
+    }
+    getInputLengthMinutesList() {
+        return cy.get('div[class="field-length"] div[class="from-time"]').eq(1).find('div[id="show_list_option_select_hour"]')
+    }
+
 
 
     //Btn Save
