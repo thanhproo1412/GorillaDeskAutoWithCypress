@@ -10,7 +10,7 @@ export default class LoginPage {
   }
 
   getLoginBtn() {
-    return cy.contains('div','Log In');
+    return cy.contains('div', 'Log In');
   }
 
 
