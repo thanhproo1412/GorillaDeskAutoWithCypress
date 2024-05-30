@@ -3,12 +3,10 @@
     "cypress": "^13.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "webpack-cli": "^5.1.4"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "e2e:chrome": "cypress run --browser chrome",
-    "cy:open": "cypress open",
-    "build": "webpack --config webpack.config.js"
+    "cy:open": "cypress open"
   }
 }
