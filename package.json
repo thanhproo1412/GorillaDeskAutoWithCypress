@@ -8,6 +8,6 @@
   "scripts": {
     "e2e:chrome": "cypress run --browser chrome",
     "cy:open": "cypress open",
-    "build": "webpack --config cypress.config.js"
+    "build": "webpack --config webpack.config.js"
   }
 }
