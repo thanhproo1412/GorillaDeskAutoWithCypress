@@ -7,7 +7,6 @@
   },
   "scripts": {
     "e2e:chrome": "cypress run --browser chrome",
-    "cy:open": "cypress open",
-    "start": "npm start"
+    "cy:open": "cypress open"
   }
 }
