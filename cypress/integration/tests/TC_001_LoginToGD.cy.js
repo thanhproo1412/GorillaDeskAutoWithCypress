@@ -1,8 +1,8 @@
 import LoginAction from '../actions/LoginAction.js';
 import privateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
 
-describe('A/B Testing', () => {
-  it('should load a version of the A/B Testing page', () => {
+describe('Login to GD', () => {
+  it('should Login to GD', () => {
 
     // Nav to home page
     cy.visit(privateData.url);

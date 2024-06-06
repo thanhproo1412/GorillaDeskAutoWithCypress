@@ -8,7 +8,7 @@
   "scripts": {
     "e2e:chrome": "cypress run --browser chrome",
     "cy:open": "cypress open",
-    "start": "cypress run"
+    "start": "cypress run --spec 'cypress/integration/tests/TC_001_LoginToGD.cy.js'"
   },
   "dependencies": {
     "wait-on": "^7.2.0"
