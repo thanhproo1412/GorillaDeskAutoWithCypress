@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-06-06T09:37:09.732Z",
+    "end": "2024-06-06T09:37:30.937Z",
+    "duration": 21205,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f464fc39-4563-4814-802c-fa2fd15a5749",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\PROD_TC_002_CreateJob.cy.js",
+      "file": "cypress\\integration\\tests\\PROD_TC_002_CreateJob.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8dd9c2d-0b13-4243-aab6-e43ac07ba13a",
+          "title": "Create Job",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Just create a new job in calendar",
+              "fullTitle": "Create Job Just create a new job in calendar",
+              "timedOut": null,
+              "duration": 18083,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Nav to home page\ncy.visit(_PrivateData.default.ProdUrl);\n// Nav to AB Testing page\nconst loginAction = new _LoginAction.default();\nloginAction.login(_PrivateData.default.ProdUsername, _PrivateData.default.ProdPassword);\nconst calendarAction = new _CalendarAction.default();\nconst jobDetailAction = new _JobDetailAction.default();\ncalendarAction.selectAgendar('Day');\ncalendarAction.openModalAddJob(_TC_002_CreateJob.default.time, _TC_002_CreateJob.default.jobType);\njobDetailAction.addJob(_TC_002_CreateJob.default.newJob);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '7741 Hayvenhurst Avenue' within the element: <div#show_list_dropdown.v2-dropdown__menu.content-full.scrolls> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '7741 Hayvenhurst Avenue' within the element: <div#show_list_dropdown.v2-dropdown__menu.content-full.scrolls> but never did.\n    at JobDetailPage.getLocationInList (webpack:///./cypress/integration/pages/JobDetailPage.js:24:76)\n    at JobDetailAction.addJob (webpack:///./cypress/integration/actions/JobDetailAction.js:17:22)\n    at Context.eval (webpack:///./cypress/integration/tests/PROD_TC_002_CreateJob.cy.js:23:20)",
+                "diff": null
+              },
+              "uuid": "d56cd674-b360-4ad7-a9f6-5f6e8d55967a",
+              "parentUUID": "b8dd9c2d-0b13-4243-aab6-e43ac07ba13a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d56cd674-b360-4ad7-a9f6-5f6e8d55967a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18083,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
