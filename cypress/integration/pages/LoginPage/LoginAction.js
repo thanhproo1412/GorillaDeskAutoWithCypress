@@ -1,4 +1,4 @@
-import LoginPage from '../pages/LoginPage.js'
+import LoginPage from './LoginPage.js'
 
 const loginPage = new LoginPage()
 

@@ -1,5 +1,5 @@
-import getMonthName from '../function/GetMonthName.js'
-import JobDetailPage from '../pages/JobDetailPage.js';
+import getMonthName from '../../function/GetMonthName.js'
+import JobDetailPage from './JobDetailPage.js';
 
 const jobDetailPage = new JobDetailPage()
 
