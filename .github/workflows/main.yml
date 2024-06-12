@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Create PrivateData.json
         run: |
-          echo "${{ secrets.PRIVATE_DATA_JSON }}" > cypress/testData/PrivateData.json
+          echo "${{ secrets.PRIVATE_DATA }}" > cypress/testData/PrivateData.json
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
