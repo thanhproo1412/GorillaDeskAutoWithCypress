@@ -14,7 +14,8 @@
   "scripts": {
     "e2e:chrome": "cypress run --browser chrome",
     "cy:open": "cypress open",
-    "start": "cypress run --spec 'cypress/integration/tests/TC_002_CreateJob.cy.js'",
+    // "start": "cypress run --spec 'cypress/integration/tests/TC_002_CreateJob.cy.js'",
+    "start": "cypress run",
     "cy:report": "cypress run && opn ./cypress/reports/mochawesome/mochawesome.html"
   },
   "dependencies": {
