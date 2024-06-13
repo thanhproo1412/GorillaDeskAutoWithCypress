@@ -12,13 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Create PrivateData.json
-        uses: jsdaniell/create-json@v1.2.3
-        with:
-         name: "credentials.json"
-         json: ${{ secrets.PRIVATE_DATA }}
-         dir: 'cypress/testData'
-        # run: |
-        #   echo "${{ secrets.PRIVATE_DATA }}" > cypress/testData/PrivateData.json
+        run: |
+          echo "${{ secrets.PRIVATE_DATA }}" > cypress/testData/PrivateData.json
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
