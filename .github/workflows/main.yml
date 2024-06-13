@@ -7,15 +7,10 @@ jobs:
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
-        containers: [1, 2] # Uses 2 parallel instances
+        containers: [1] # Uses 2 parallel instances
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Delete existing PrivateData.json (if it exists)
-        run: |
-          if [ -f "cypress/testData/PrivateData.json" ]; then
-            rm cypress/testData/PrivateData.json
-          fi
       - name: Create PrivateData.json
         run: |
           echo "${{ secrets.PRIVATE_DATA }}" > cypress/testData/PrivateData.json
