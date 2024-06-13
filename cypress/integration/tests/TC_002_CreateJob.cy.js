@@ -5,6 +5,8 @@ import privateData from '../../testData/PrivateData.json'; // Assuming login.jso
 import jobData from '../../testData/TC_002_CreateJob.json'; // Assuming login.json is in testData folder
 
 
+console.log(privateData)
+
 describe('Create Job', () => {
   it('Just create a new job in calendar', () => {
 

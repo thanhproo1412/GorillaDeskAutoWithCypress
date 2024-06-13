@@ -1,7 +1,6 @@
 import LoginAction from '../pages/LoginPage/LoginAction';
 import privateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
 
-console.log(privateData)
 
 describe('Login to GD', () => {
   it('should Login to GD', () => {
