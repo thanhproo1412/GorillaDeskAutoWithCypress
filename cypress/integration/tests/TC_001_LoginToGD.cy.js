@@ -1,10 +1,10 @@
 import LoginAction from '../pages/LoginPage/LoginAction';
-import PrivateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
+import privateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
+
+console.log(privateData)
 
 describe('Login to GD', () => {
   it('should Login to GD', () => {
-
-    const privateData = JSON.parse(PrivateData)
 
     // Nav to home page
     cy.visit(privateData.url);
