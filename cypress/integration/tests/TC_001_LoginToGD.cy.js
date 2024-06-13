@@ -1,4 +1,4 @@
-import LoginAction from '../pages/LoginPage/LoginAction';
+import LoginAction from '../pages/LoginPage/LoginAction.js';
 import privateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
 
 describe('Login to GD', () => {
