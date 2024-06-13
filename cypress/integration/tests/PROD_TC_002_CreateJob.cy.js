@@ -1,8 +1,8 @@
 import LoginAction from '../pages/LoginPage/LoginAction';
 import CalendarAction from '../pages/CalendarPage/CalendarAction.js';
 import JobDetailAction from '../pages/JobDetailPage/JobDetailAction.js';
-import privateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
-import jobData from '../../testData/TC_002_CreateJob.json'; // Assuming login.json is in testData folder
+import privateData from '../../testData/PrivateData.json';
+import jobData from '../../testData/TC_002_CreateJob.json'; 
 
 
 describe('Create Job', () => {
