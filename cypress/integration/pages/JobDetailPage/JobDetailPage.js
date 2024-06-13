@@ -4,13 +4,16 @@ export default class JobDetailPage {
     //--------------------- Job Detail ---------------------------------
     //Get Customer
     getSearchCustomer() {
-        return cy.get('div[id="show_list_customer_dropdown"] input[placeholder="Search Customers"]');
+        // return cy.get('div[id="show_list_customer_dropdown"] input[placeholder="Search Customers"]');
+        return cy.get('input[placeholder="Search Customers"]');
     }
     getSearchCustomerList() {
+        // return cy.get('div[class="v2-dropdown__menu content-user content-full scrolls"]');
         return cy.get('div[id="show_list_customer_dropdown"] div[class="v2-dropdown__menu content-user content-full scrolls"]');
     }
     getCustomerInList(name) {
-        return cy.get('div[id="show_list_customer_dropdown"] div[class="v2-dropdown__menu content-user content-full scrolls"]').contains(name);
+        // return cy.get('div[id="show_list_customer_dropdown"] div[class="v2-dropdown__menu content-user content-full scrolls"]').contains(name);
+        return cy.get('div[class="v2-dropdown__menu content-user content-full scrolls"]').contains(name);
     }
 
     // Get Location

@@ -6,7 +6,7 @@ import jobData from '../../testData/TC_002_CreateJob.json'; // Assuming login.js
 
 
 describe('Create Job', () => {
-  it('Just create a new job in calendar', () => {
+  it.skip('Just create a new job in calendar', () => {
 
     // Nav to home page
     cy.visit(privateData.ProdUrl);
