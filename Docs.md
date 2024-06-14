@@ -1,4 +1,5 @@
-Setup Cypress
+Setup Cypress Document
+Google docs: https://docs.google.com/document/d/1Jf8pDorAhc7C7JAYmnZp6esvj43PbFlsrFOPNCZUrTY/edit?usp=sharing
 
 1. Required: Install Nodejs, Vs code
 
@@ -7,7 +8,7 @@ Setup Cypress
 3. Open Project with Vs code, in Terminal run:
 
 npm i
-npm i cypress
+npm install cypress
 
 4. Create File PrivateData.json in Cypress/TestData/PrivateData.json
    File PrivateData.json: {
