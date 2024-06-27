@@ -1,7 +1,42 @@
 export default class JobDetailPage {
 
 
-    //--------------------- Job Detail ---------------------------------
+    //  #region--------------------- Navigation tab ---------------------------------
+    //Get btn job detail section
+    getNavJobDetail() {
+        return cy.get('ul[class="tab-selectors"]').contains('Job Details');
+    }
+    //Get btn job detail section
+    getNavDocuments() {
+        return cy.get('ul[class="tab-selectors"]').contains('Documents');
+    }
+    //Get btn job detail section
+    getNavJobDetail() {
+        return cy.get('ul[class="tab-selectors"]').contains('Materials');
+    }
+    //Get btn Add Invoice
+    getNavAddInvoice() {
+        return cy.get('ul[class="tab-selectors"]').contains('Invoice');
+    }
+    //Get btn Estimate
+    getNavEstimate() {
+        return cy.get('ul[class="tab-selectors"]').contains('Estimate');
+    }
+
+    //Add button-------------------------
+    //Get btn Add Invoice
+    getNavAddInvoice() {
+        return cy.get('ul[class="tab-selectors"]').contains('Add Invoice');
+    }
+    //Get btn Add Estimate
+    getNavAddEstimate() {
+        return cy.get('ul[class="tab-selectors"]').contains('Add Estimate');
+    }
+
+    // #endregion Navigation tab----------------------------------------------------
+
+
+    // #region --------------------- Job Detail ---------------------------------
     //Get Customer
     getSearchCustomer() {
         // return cy.get('div[id="show_list_customer_dropdown"] input[placeholder="Search Customers"]');
@@ -75,7 +110,23 @@ export default class JobDetailPage {
         return cy.get('div[class="field-length"] div[class="from-time"]').eq(1).find('div[id="show_list_option_select_hour"]')
     }
 
+    // #endregion Job Detail
 
+    // #region --------------------- Documents ---------------------------------
+    //Get btn Add Document - Open DocList
+    getBtnAddDocumentList() {
+        return cy.get('div.v2-btn-main.has-icon').contains('Add Document')
+    }
+
+    //getBtnAddDoc
+    getBtnAddDoc() {
+        return cy.get('div[class="docs-name"]').contains('Add Document')
+    }
+
+
+    // #endregion Documents
+
+    // #region --------------------- Button save ---------------------------------
 
     //Btn Save
     getBtnSave() {
@@ -92,4 +143,6 @@ export default class JobDetailPage {
         return cy.get('div[class="loading v2-btn-default --grey btn-lg"]')
 
     }
+    // #endregion Button save ---------------------------------
+
 }
