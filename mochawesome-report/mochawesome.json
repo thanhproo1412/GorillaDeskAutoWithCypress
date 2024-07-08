@@ -2,15 +2,15 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
-    "pending": 1,
+    "passes": 1,
+    "pending": 0,
     "failures": 0,
-    "start": "2024-07-08T10:06:31.399Z",
-    "end": "2024-07-08T10:06:31.427Z",
-    "duration": 28,
+    "start": "2024-07-08T10:35:48.466Z",
+    "end": "2024-07-08T10:36:26.354Z",
+    "duration": 37888,
     "testsRegistered": 1,
-    "passPercent": null,
-    "pendingPercent": 100,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "d9526dfb-029a-4613-9730-51d80ab8a6a2",
+      "uuid": "5e569170-5f50-4d6c-81d1-c738f0d17db7",
       "title": "",
-      "fullFile": "cypress\\integration\\tests\\PROD_TC_002_CreateJob.cy.js",
-      "file": "cypress\\integration\\tests\\PROD_TC_002_CreateJob.cy.js",
+      "fullFile": "cypress\\integration\\tests\\TC_002_CreateJob.cy.js",
+      "file": "cypress\\integration\\tests\\TC_002_CreateJob.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "70450b29-2b29-414c-b8be-7fc29a4b8f2d",
+          "uuid": "e875437a-d872-4870-8d8f-88ac3543d40d",
           "title": "Create Job",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Just create a new job in calendar",
               "fullTitle": "Create Job Just create a new job in calendar",
               "timedOut": null,
-              "duration": 0,
-              "state": "pending",
-              "speed": null,
-              "pass": false,
+              "duration": 36128,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
-              "code": "// Nav to home page\ncy.visit(_PrivateData.default.ProdUrl);\n// Nav to AB Testing page\nconst loginAction = new _LoginAction.default();\nloginAction.login(_PrivateData.default.ProdUsername, _PrivateData.default.ProdPassword);\nconst calendarAction = new _CalendarAction.default();\nconst jobDetailAction = new _JobDetailAction.default();\ncalendarAction.selectAgendar('Day');\ncalendarAction.openModalAddJob(_TC_002_CreateJob.default.time, _TC_002_CreateJob.default.jobType);\njobDetailAction.addJob(_TC_002_CreateJob.default.newJob);",
+              "code": "// Nav to home page\ncy.visit(_PrivateData.default.url);\n// Nav to AB Testing page\nconst loginAction = new _LoginAction.default();\nloginAction.login(_PrivateData.default.username, _PrivateData.default.password);\nconst calendarAction = new _CalendarAction.default();\nconst jobDetailAction = new _JobDetailAction.default();\ncalendarAction.selectAgendar('Day');\ncalendarAction.openModalAddJob(_TC_002_CreateJob.default.time, _TC_002_CreateJob.default.jobType);\njobDetailAction.addJob(_TC_002_CreateJob.default.newJob);",
               "err": {},
-              "uuid": "16bb1349-f96b-411a-9f69-2c9aae8df937",
-              "parentUUID": "70450b29-2b29-414c-b8be-7fc29a4b8f2d",
+              "uuid": "362137a7-f7f7-483b-acfd-8300a3deb080",
+              "parentUUID": "e875437a-d872-4870-8d8f-88ac3543d40d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [],
-          "pending": [
-            "16bb1349-f96b-411a-9f69-2c9aae8df937"
+          "passes": [
+            "362137a7-f7f7-483b-acfd-8300a3deb080"
           ],
+          "failures": [],
+          "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 36128,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,11 +94,7 @@
     },
     "marge": {
       "options": {
-        "id": "default",
-        "reportDir": "cypress/reports/mochawesome",
-        "overwrite": false,
-        "html": true,
-        "json": true
+        "configFile": "reporterConfig.json"
       },
       "version": "6.2.0"
     }
