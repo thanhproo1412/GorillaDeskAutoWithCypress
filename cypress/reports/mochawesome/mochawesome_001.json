@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-06-06T09:26:29.987Z",
-    "end": "2024-06-06T09:27:34.388Z",
-    "duration": 64401,
+    "failures": 0,
+    "start": "2024-07-08T10:06:33.211Z",
+    "end": "2024-07-08T10:06:48.660Z",
+    "duration": 15449,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "75dab53c-252b-4100-b2b9-7d9790152641",
+      "uuid": "4827b7cc-9465-4563-8965-820eda44dcb3",
       "title": "",
       "fullFile": "cypress\\integration\\tests\\TC_001_LoginToGD.cy.js",
       "file": "cypress\\integration\\tests\\TC_001_LoginToGD.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7a03fb5f-164a-4f74-82de-ca1d061525fa",
+          "uuid": "4474402d-badd-474c-a6da-0c397ee18d6b",
           "title": "Login to GD",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "should Login to GD",
               "fullTitle": "Login to GD should Login to GD",
               "timedOut": null,
-              "duration": 60186,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 12679,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "// Nav to home page\ncy.visit(_PrivateData.default.url);\n// Nav to AB Testing page\nconst loginAction = new _LoginAction.default();\nloginAction.login(_PrivateData.default.username, _PrivateData.default.password);",
-              "err": {
-                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
-                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:130522:64)\n    at <unknown> (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:131508:16)\n    at tryCatcher (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/integration/tests/TC_001_LoginToGD.cy.js:8:7)",
-                "diff": null
-              },
-              "uuid": "d5f96aff-1a26-4459-820f-f40a2c36d436",
-              "parentUUID": "7a03fb5f-164a-4f74-82de-ca1d061525fa",
+              "err": {},
+              "uuid": "f1dc8f1a-cb38-4af6-b220-eda9944ffbda",
+              "parentUUID": "4474402d-badd-474c-a6da-0c397ee18d6b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "d5f96aff-1a26-4459-820f-f40a2c36d436"
+          "passes": [
+            "f1dc8f1a-cb38-4af6-b220-eda9944ffbda"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 60186,
+          "duration": 12679,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

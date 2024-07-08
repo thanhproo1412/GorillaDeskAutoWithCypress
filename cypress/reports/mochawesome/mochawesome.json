@@ -3,14 +3,14 @@
     "suites": 1,
     "tests": 1,
     "passes": 0,
-    "pending": 0,
-    "failures": 1,
-    "start": "2024-06-06T09:26:04.602Z",
-    "end": "2024-06-06T09:26:28.114Z",
-    "duration": 23512,
+    "pending": 1,
+    "failures": 0,
+    "start": "2024-07-08T10:06:31.399Z",
+    "end": "2024-07-08T10:06:31.427Z",
+    "duration": 28,
     "testsRegistered": 1,
-    "passPercent": 0,
-    "pendingPercent": 0,
+    "passPercent": null,
+    "pendingPercent": 100,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "33af1d7d-820d-4652-9e30-3183ffd203d5",
+      "uuid": "d9526dfb-029a-4613-9730-51d80ab8a6a2",
       "title": "",
       "fullFile": "cypress\\integration\\tests\\PROD_TC_002_CreateJob.cy.js",
       "file": "cypress\\integration\\tests\\PROD_TC_002_CreateJob.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e69a1fd3-1c33-4f0d-bdf6-a52ee9379e60",
+          "uuid": "70450b29-2b29-414c-b8be-7fc29a4b8f2d",
           "title": "Create Job",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Just create a new job in calendar",
               "fullTitle": "Create Job Just create a new job in calendar",
               "timedOut": null,
-              "duration": 18703,
-              "state": "failed",
+              "duration": 0,
+              "state": "pending",
               "speed": null,
               "pass": false,
-              "fail": true,
-              "pending": false,
+              "fail": false,
+              "pending": true,
               "context": null,
               "code": "// Nav to home page\ncy.visit(_PrivateData.default.ProdUrl);\n// Nav to AB Testing page\nconst loginAction = new _LoginAction.default();\nloginAction.login(_PrivateData.default.ProdUsername, _PrivateData.default.ProdPassword);\nconst calendarAction = new _CalendarAction.default();\nconst jobDetailAction = new _JobDetailAction.default();\ncalendarAction.selectAgendar('Day');\ncalendarAction.openModalAddJob(_TC_002_CreateJob.default.time, _TC_002_CreateJob.default.jobType);\njobDetailAction.addJob(_TC_002_CreateJob.default.newJob);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div[class=\"v2-dropdown list-agenda\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div[class=\"v2-dropdown list-agenda\"]`, but never found it.\n    at CalendarPage.getListAgendaBtn (webpack:///./cypress/integration/pages/CalendarPage.js:5:14)\n    at CalendarAction.selectAgendar (webpack:///./cypress/integration/actions/CalendarAction.js:10:21)\n    at Context.eval (webpack:///./cypress/integration/tests/PROD_TC_002_CreateJob.cy.js:21:19)",
-                "diff": null
-              },
-              "uuid": "b0b8a508-4810-4c1e-a4f8-5aae5683c4de",
-              "parentUUID": "e69a1fd3-1c33-4f0d-bdf6-a52ee9379e60",
+              "err": {},
+              "uuid": "16bb1349-f96b-411a-9f69-2c9aae8df937",
+              "parentUUID": "70450b29-2b29-414c-b8be-7fc29a4b8f2d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [],
-          "failures": [
-            "b0b8a508-4810-4c1e-a4f8-5aae5683c4de"
+          "failures": [],
+          "pending": [
+            "16bb1349-f96b-411a-9f69-2c9aae8df937"
           ],
-          "pending": [],
           "skipped": [],
-          "duration": 18703,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

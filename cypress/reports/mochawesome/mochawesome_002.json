@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-06-06T09:27:36.732Z",
-    "end": "2024-06-06T09:28:39.118Z",
-    "duration": 62386,
+    "start": "2024-07-08T10:06:50.655Z",
+    "end": "2024-07-08T10:07:53.447Z",
+    "duration": 62792,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "075a0085-9e56-4b05-ae69-692c6a4f4ecb",
+      "uuid": "43a3c34d-fd84-476d-8a24-831cfca3e1d5",
       "title": "",
       "fullFile": "cypress\\integration\\tests\\TC_002_CreateJob.cy.js",
       "file": "cypress\\integration\\tests\\TC_002_CreateJob.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "82320e62-1a12-488b-b82c-c09f9f465719",
+          "uuid": "0ffa7c98-e52f-448c-9369-4b01cc375e94",
           "title": "Create Job",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Just create a new job in calendar",
               "fullTitle": "Create Job Just create a new job in calendar",
               "timedOut": null,
-              "duration": 60228,
+              "duration": 60337,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -48,11 +48,11 @@
               "code": "// Nav to home page\ncy.visit(_PrivateData.default.url);\n// Nav to AB Testing page\nconst loginAction = new _LoginAction.default();\nloginAction.login(_PrivateData.default.username, _PrivateData.default.password);\nconst calendarAction = new _CalendarAction.default();\nconst jobDetailAction = new _JobDetailAction.default();\ncalendarAction.selectAgendar('Day');\ncalendarAction.openModalAddJob(_TC_002_CreateJob.default.time, _TC_002_CreateJob.default.jobType);\njobDetailAction.addJob(_TC_002_CreateJob.default.newJob);",
               "err": {
                 "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
-                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:130522:64)\n    at <unknown> (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:131508:16)\n    at tryCatcher (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/integration/tests/TC_002_CreateJob.cy.js:12:7)",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:130522:64)\n    at <unknown> (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:131508:16)\n    at tryCatcher (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://r2.gdesk.io/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/integration/tests/TC_002_CreateJob.cy.js:14:7)",
                 "diff": null
               },
-              "uuid": "5819c565-c3f4-4590-8899-723b5a95837e",
-              "parentUUID": "82320e62-1a12-488b-b82c-c09f9f465719",
+              "uuid": "bf442047-8c21-4a31-9506-8c82fa3f189f",
+              "parentUUID": "0ffa7c98-e52f-448c-9369-4b01cc375e94",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5819c565-c3f4-4590-8899-723b5a95837e"
+            "bf442047-8c21-4a31-9506-8c82fa3f189f"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 60228,
+          "duration": 60337,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
