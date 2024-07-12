@@ -28,5 +28,9 @@ module.exports = defineConfig({
 
   },
 
+  "video": true,  // Enable video recording
+  "videosFolder": "cypress/videos",  // Folder where videos will be saved
+  "videoCompression": false,  // Disable video compression (optional)
+  "trashAssetsBeforeRuns": true  // Optionally clear assets before runs
 
 });

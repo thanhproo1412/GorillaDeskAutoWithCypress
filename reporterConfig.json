@@ -1,5 +1,5 @@
 {
-    "reporterEnabled": "cypress-multi-reporters",
+    "reporterEnabled": "mochawesome",
     "mochawesomeReporterOptions": {
       "reportDir": "cypress/results",
       "overwrite": true,
