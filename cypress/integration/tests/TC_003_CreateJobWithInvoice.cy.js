@@ -23,8 +23,10 @@ describe('Create Job', () => {
     calendarAction.selectAgendar('Day')
     calendarAction.openModalAddJob(jobData.time, jobData.jobType)
     jobDetailAction.addJob(jobData.newJob)
-    jobDetailAction.saveJob()
-    jobDetailAction.closeJob()
+    jobDetailAction.addInvoice(jobData.invoice)
+
+    // jobDetailAction.saveJob()
+    // jobDetailAction.closeJob()
 
 
 

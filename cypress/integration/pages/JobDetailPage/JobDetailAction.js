@@ -32,9 +32,57 @@ export default class JobDetailAction {
         jobDetailPage.getInputLengthMinutesBtn().click()
         jobDetailPage.getInputLengthMinutesList().contains(jobData.lengthMinutes).click()
 
+
+
+    }
+
+    addInvoice(invoiceData) {
+
+        // check the service have invoice or not
+        jobDetailPage.getNavEstimate() ? jobDetailPage.getNavEstimate().click() : jobDetailPage.getNavAddEstimate().click()
+
+        //click in search invoice
+        jobDetailPage.getInputItemService().click()
+        // wait for loadding
+        jobDetailPage.getInputItemServiceListLoadding().should('not.exist')
+        // clear data and type item
+        jobDetailPage.getInputItemService().clear().type(invoiceData.item)
+        // select item
+        jobDetailPage.getInputItemServiceList().contains(invoiceData.item).click()
+
+
+        //input cost
+        jobDetailPage.getInputItemCost().clear().type(invoiceData.cost)
+
+        //input tax 1
+        jobDetailPage.getInputItemTax().click()
+        jobDetailPage.getInputItemTaxList().contains(invoiceData.tax).click()
+
+        //input tax 2
+        jobDetailPage.getInputItemTax2().click()
+        jobDetailPage.getInputItemTax2List().contains(invoiceData.tax).click()
+
+        //input qty
+        jobDetailPage.getInputItemQTY().clear().type(invoiceData.qty)
+
+        //input description
+        jobDetailPage.getInputItemDescription().clear().type(invoiceData.description)
+
+
+
+    }
+
+
+    saveJob() {
+
         //click save
         jobDetailPage.getBtnSave().click()
 
+    }
+
+    closeJob() {
+
+        // wait for job saved
         jobDetailPage.getLoaddingAfterAddJob().should('exist')
         jobDetailPage.getLoaddingAfterAddJob().should('not.exist')
 

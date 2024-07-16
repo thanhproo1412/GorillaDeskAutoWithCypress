@@ -22,6 +22,19 @@ export default class JobDetailPage {
     getNavEstimate() {
         return cy.get('ul[class="tab-selectors"]').contains('Estimate');
     }
+    //get btn Add estimate
+    getNavAddEstimate() {
+        cy.get('ul.tab-selectors > li').contains('Add Estimate');
+    }
+    //Get btn Invoice
+    getNavEstimate() {
+        return cy.get('ul[class="tab-selectors"]').contains('Invoice');
+    }
+    //get btn Add Invoice
+    getNavAddEstimate() {
+        cy.get('ul.tab-selectors > li').contains('Add Invoice');
+    }
+
 
     //Add button-------------------------
     //Get btn Add Invoice
@@ -36,7 +49,7 @@ export default class JobDetailPage {
     // #endregion Navigation tab----------------------------------------------------
 
 
-    // #region --------------------- Job Detail ---------------------------------
+    // #region --------------------- Job Detail section---------------------------------
     //Get Customer
     getSearchCustomer() {
         // return cy.get('div[id="show_list_customer_dropdown"] input[placeholder="Search Customers"]');
@@ -112,7 +125,7 @@ export default class JobDetailPage {
 
     // #endregion Job Detail
 
-    // #region --------------------- Documents ---------------------------------
+    // #region --------------------- Documents section---------------------------------
     //Get btn Add Document - Open DocList
     getBtnAddDocumentList() {
         return cy.get('div.v2-btn-main.has-icon').contains('Add Document')
@@ -123,6 +136,59 @@ export default class JobDetailPage {
         return cy.get('div[class="docs-name"]').contains('Add Document')
     }
 
+    // #endregion Documents
+
+    // #region --------------------- Invoice section ---------------------------------
+    //Get btn Add Document - Open DocList
+    getInputItemService() {
+        return cy.get('div.items-service.tb-content').find('div.search-input input');
+    }
+    //list item load
+    getInputItemServiceListLoadding() {
+        return cy.get('div.items-service.tb-content').find('div.loading');
+    }
+    // list item ul
+    getInputItemServiceList() {
+        return cy.get('div.items-service.tb-content ul.box-auto.scrolls')
+    }
+    // item in list item
+    getInputItemServiceListItem(data) {
+        return cy.get('div.items-service.tb-content ul.box-auto.scrolls li').contains(data)
+    }
+    // item cost input
+    getInputItemCost() {
+        return cy.get('div.items-service.tb-content div.col-cost input')
+    }
+    // item Tax btn
+    getInputItemTax() {
+        return cy.get('div.items-service.tb-content div.col-tax.first-field')
+    }
+    // item Tax list
+    getInputItemTaxList() {
+        return cy.get('div.items-service.tb-content div.col-tax.first-field ul')
+    }
+    // item Tax 2 btn
+    getInputItemTax2() {
+        return cy.get('div.items-service.tb-content div.col-tax.second-field')
+    }
+    // item Tax 2 list
+    getInputItemTax2List() {
+        return cy.get('div.items-service.tb-content div.col-tax.second-field ul')
+    }
+    // item cost input
+    getInputItemQTY() {
+        return cy.get('div.items-service.tb-content div.col-qty input')
+    }
+
+    // item description
+    getInputItemDescription() {
+        return cy.get('div.item-note.boxs.dashboard-wrapper .public-DraftStyleDefault-block')
+    }
+
+    //getBtnAddDoc
+    getBtnAddDoc() {
+        return cy.get('div[class="docs-name"]').contains('Add Document')
+    }
 
     // #endregion Documents
 

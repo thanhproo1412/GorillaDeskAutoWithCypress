@@ -9,5 +9,16 @@
         "time": "07:30 AM",
         "lengthHours": "1",
         "lengthMinutes": "30"
+    },
+    "invoice": {
+        "item": "invoice item",
+        "description": "invoice description by auto tool",
+        "cost": "10000",
+        "tax": "10",
+        "qty": "2",
+        "discount": "15",
+        "term": "term by auto tool",
+        "note": "note by auto tool",
+        "noteTemplate": ""
     }
 }
