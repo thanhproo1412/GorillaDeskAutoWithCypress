@@ -185,12 +185,18 @@ export default class JobDetailPage {
         return cy.get('div.item-note.boxs.dashboard-wrapper .public-DraftStyleDefault-block')
     }
 
-    //getBtnAddDoc
-    getBtnAddDoc() {
-        return cy.get('div[class="docs-name"]').contains('Add Document')
+    // item Term
+    getInputInvoiceTerm() {
+        return cy.get('div.boxs.--terms-note textarea[name="terms"]')
     }
 
-    // #endregion Documents
+    // item Note
+    getInputInvoiceNote() {
+        return cy.get('div.boxs.--terms-note:nth-of-type(2) div.notranslate.public-DraftEditor-content')
+    }
+
+    // #endregion Invoice
+
 
     // #region --------------------- Button save ---------------------------------
 

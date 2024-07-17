@@ -5,7 +5,7 @@ const jobDetailPage = new JobDetailPage()
 
 export default class JobDetailAction {
 
-
+    // Add new job
     addJob(jobData) {
         //select customer
         cy.wait(2000)
@@ -21,7 +21,6 @@ export default class JobDetailAction {
         jobDetailPage.getServiceInList(jobData.service).click()
         cy.wait(2000)
 
-
         //select date
         // jobDetailPage.getInputDate().clear().type(jobData.date)
         this.selectDate(jobData.date)
@@ -32,10 +31,9 @@ export default class JobDetailAction {
         jobDetailPage.getInputLengthMinutesBtn().click()
         jobDetailPage.getInputLengthMinutesList().contains(jobData.lengthMinutes).click()
 
-
-
     }
 
+    //Add Invoice func
     addInvoice(invoiceData) {
 
         // check the service have invoice or not
@@ -67,12 +65,58 @@ export default class JobDetailAction {
 
         //input description
         jobDetailPage.getInputItemDescription().clear().type(invoiceData.description)
+        //input description
+        jobDetailPage.getInputInvoiceTerm().clear().type(invoiceData.term)
+        //input description
+        jobDetailPage.getInputInvoiceNote().clear().type(invoiceData.note)
+
+
 
 
 
     }
 
 
+    // Add Estimate func
+    addEstimate(invoiceData) {
+
+        // check the service have invoice or not
+        jobDetailPage.getNavEstimate() ? jobDetailPage.getNavEstimate().click() : jobDetailPage.getNavAddEstimate().click()
+
+        //click in search invoice
+        jobDetailPage.getInputItemService().click()
+        // wait for loadding
+        jobDetailPage.getInputItemServiceListLoadding().should('not.exist')
+        // clear data and type item
+        jobDetailPage.getInputItemService().clear().type(invoiceData.item)
+        // select item
+        jobDetailPage.getInputItemServiceList().contains(invoiceData.item).click()
+
+
+        //input cost
+        jobDetailPage.getInputItemCost().clear().type(invoiceData.cost)
+
+        //input tax 1
+        jobDetailPage.getInputItemTax().click()
+        jobDetailPage.getInputItemTaxList().contains(invoiceData.tax).click()
+
+        //input tax 2
+        jobDetailPage.getInputItemTax2().click()
+        jobDetailPage.getInputItemTax2List().contains(invoiceData.tax).click()
+
+        //input qty
+        jobDetailPage.getInputItemQTY().clear().type(invoiceData.qty)
+
+        //input description
+        jobDetailPage.getInputItemDescription().clear().type(invoiceData.description)
+        //input description
+        jobDetailPage.getInputInvoiceTerm().clear().type(invoiceData.term)
+        //input description
+        jobDetailPage.getInputInvoiceNote().clear().type(invoiceData.note)
+
+    }
+
+    //Click save job
     saveJob() {
 
         //click save
@@ -80,6 +124,7 @@ export default class JobDetailAction {
 
     }
 
+    // Close Job
     closeJob() {
 
         // wait for job saved
@@ -91,6 +136,7 @@ export default class JobDetailAction {
 
     }
 
+    // Select date
     selectDate(date) {
 
         const newDate = new Date(date)
@@ -113,8 +159,6 @@ export default class JobDetailAction {
 
         //select date
         jobDetailPage.getSelectDateList().contains(d).click()
-
-
 
     }
 
