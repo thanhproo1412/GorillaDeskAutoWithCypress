@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@testing-library/cypress": "^10.0.2",
-    "cypress": "^13.11.0",
+    "cypress": "^13.13.0",
     "cypress-multi-reporters": "^1.6.4",
     "mocha": "^10.4.0",
     "mochawesome": "^7.1.3",
