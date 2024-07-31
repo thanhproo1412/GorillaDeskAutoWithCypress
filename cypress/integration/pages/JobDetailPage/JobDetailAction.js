@@ -58,18 +58,19 @@ export default class JobDetailAction {
 
         //input tax 2
         jobDetailPage.getInputItemTax2().click()
-        jobDetailPage.getInputItemTax2List().contains(invoiceData.tax).click()
+        jobDetailPage.getInputItemTax2List().contains(invoiceData.tax2).click()
 
         //input qty
         jobDetailPage.getInputItemQTY().clear().type(invoiceData.qty)
 
         //input description
         jobDetailPage.getInputItemDescription().clear().type(invoiceData.description)
-        //input description
+        //input invoice discount
+        jobDetailPage.getInputInvoiceDiscount().clear().type(invoiceData.discount)
+        //input term
         jobDetailPage.getInputInvoiceTerm().clear().type(invoiceData.term)
-        //input description
+        //input note
         jobDetailPage.getInputInvoiceNote().clear().type(invoiceData.note)
-
 
 
 
@@ -78,41 +79,45 @@ export default class JobDetailAction {
 
 
     // Add Estimate func
-    addEstimate(invoiceData) {
+    addEstimate(estimateData) {
 
         // check the service have invoice or not
         jobDetailPage.getNavEstimate() ? jobDetailPage.getNavEstimate().click() : jobDetailPage.getNavAddEstimate().click()
 
-        //click in search invoice
-        jobDetailPage.getInputItemService().click()
+        //click in search Estimate
+        jobDetailPage.getInputEstimateItemService().click()
         // wait for loadding
-        jobDetailPage.getInputItemServiceListLoadding().should('not.exist')
+        jobDetailPage.getInputEstimateItemServiceListLoadding().should('not.exist')
         // clear data and type item
-        jobDetailPage.getInputItemService().clear().type(invoiceData.item)
+        jobDetailPage.getInputEstimateItemService().clear().type(estimateData.item)
         // select item
-        jobDetailPage.getInputItemServiceList().contains(invoiceData.item).click()
+        jobDetailPage.getInputEstimateItemServiceList().contains(estimateData.item).click()
 
 
         //input cost
-        jobDetailPage.getInputItemCost().clear().type(invoiceData.cost)
+        jobDetailPage.getInputEstimateItemCost().clear().type(estimateData.cost)
 
         //input tax 1
-        jobDetailPage.getInputItemTax().click()
-        jobDetailPage.getInputItemTaxList().contains(invoiceData.tax).click()
+        jobDetailPage.getInputEstimateItemTax().click()
+        jobDetailPage.getInputEstimateItemTaxList().contains(estimateData.tax).click()
 
         //input tax 2
-        jobDetailPage.getInputItemTax2().click()
-        jobDetailPage.getInputItemTax2List().contains(invoiceData.tax).click()
+        jobDetailPage.getInputEstimateItemTax2().click()
+        jobDetailPage.getInputEstimateItemTax2List().contains(String(estimateData.tax2)).click()
 
         //input qty
-        jobDetailPage.getInputItemQTY().clear().type(invoiceData.qty)
+        jobDetailPage.getInputEstimateItemQTY().clear().type(estimateData.qty)
 
         //input description
-        jobDetailPage.getInputItemDescription().clear().type(invoiceData.description)
-        //input description
-        jobDetailPage.getInputInvoiceTerm().clear().type(invoiceData.term)
-        //input description
-        jobDetailPage.getInputInvoiceNote().clear().type(invoiceData.note)
+        jobDetailPage.getInputEstimateItemDescription().clear().type(estimateData.description)
+        //input invoice discount
+        jobDetailPage.getInputEstimateItemDiscount().clear().type(estimateData.discount)
+        //input Invoice Term
+        jobDetailPage.getInputEstimateTerm().clear().type(estimateData.term)
+        //input Invoice
+        jobDetailPage.getInputEstimateNote().clear().type(estimateData.note)
+
+
 
     }
 

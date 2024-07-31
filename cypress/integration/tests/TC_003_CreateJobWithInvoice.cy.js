@@ -2,7 +2,7 @@ import LoginAction from '../pages/LoginPage/LoginAction';
 import CalendarAction from '../pages/CalendarPage/CalendarAction';
 import JobDetailAction from '../pages/JobDetailPage/JobDetailAction';
 import privateData from '../../testData/PrivateData.json';
-import jobData from '../../testData/TC_002_CreateJob.json';
+import jobData from '../../testData/TC_003_CreateJobWithInvoice.json';
 
 
 console.log(privateData)

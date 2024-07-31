@@ -24,10 +24,10 @@ export default class JobDetailPage {
     }
     //get btn Add estimate
     getNavAddEstimate() {
-        cy.get('ul.tab-selectors > li').contains('Add Estimate');
+        cy.get('ul.tab-selectors li').contains('Add Estimate');
     }
     //Get btn Invoice
-    getNavEstimate() {
+    getNavInvoice() {
         return cy.get('ul[class="tab-selectors"]').contains('Invoice');
     }
     //get btn Add Invoice
@@ -143,15 +143,15 @@ export default class JobDetailPage {
     getInputItemService() {
         return cy.get('div.items-service.tb-content').find('div.search-input input');
     }
-    //list item load
+    //list Invoice item load
     getInputItemServiceListLoadding() {
         return cy.get('div.items-service.tb-content').find('div.loading');
     }
-    // list item ul
+    // list Invoice item ul
     getInputItemServiceList() {
         return cy.get('div.items-service.tb-content ul.box-auto.scrolls')
     }
-    // item in list item
+    // Invoice item in list item
     getInputItemServiceListItem(data) {
         return cy.get('div.items-service.tb-content ul.box-auto.scrolls li').contains(data)
     }
@@ -159,43 +159,115 @@ export default class JobDetailPage {
     getInputItemCost() {
         return cy.get('div.items-service.tb-content div.col-cost input')
     }
-    // item Tax btn
+    // Invoice Tax btn
     getInputItemTax() {
         return cy.get('div.items-service.tb-content div.col-tax.first-field')
     }
-    // item Tax list
+    // Invoice Tax list
     getInputItemTaxList() {
         return cy.get('div.items-service.tb-content div.col-tax.first-field ul')
     }
-    // item Tax 2 btn
+    // Invoice Tax 2 btn
     getInputItemTax2() {
         return cy.get('div.items-service.tb-content div.col-tax.second-field')
     }
-    // item Tax 2 list
+    // Invoice Tax 2 list
     getInputItemTax2List() {
         return cy.get('div.items-service.tb-content div.col-tax.second-field ul')
     }
-    // item cost input
+    // Invoice cost input
     getInputItemQTY() {
         return cy.get('div.items-service.tb-content div.col-qty input')
     }
 
-    // item description
+    // Invoice description
     getInputItemDescription() {
         return cy.get('div.item-note.boxs.dashboard-wrapper .public-DraftStyleDefault-block')
     }
 
-    // item Term
+    // Invoice Term
     getInputInvoiceTerm() {
         return cy.get('div.boxs.--terms-note textarea[name="terms"]')
     }
 
-    // item Note
+    // Invoice Note
     getInputInvoiceNote() {
         return cy.get('div.boxs.--terms-note:nth-of-type(2) div.notranslate.public-DraftEditor-content')
     }
 
+    //  Invoice discount
+    getInputInvoiceDiscount() {
+        return cy.get('div.edit-discount input.field-input')
+    }
+
+
     // #endregion Invoice
+
+    // #region --------------------- Estimate section ---------------------------------
+    //Get input Estimate item
+    getInputEstimateItemService() {
+        return cy.get('div.items-service.tb-content').find('div.search-input input');
+    }
+    //list item load
+    getInputEstimateItemServiceListLoadding() {
+        return cy.get('div.items-service.tb-content').find('div.loading');
+    }
+    // list item ul
+    getInputEstimateItemServiceList() {
+        return cy.get('div.items-service.tb-content ul.box-auto.scrolls')
+    }
+    // item in list item
+    getInputEstimateItemServiceListItem(data) {
+        return cy.get('div.items-service.tb-content ul.box-auto.scrolls li').contains(data)
+    }
+    // Estimate item cost input
+    getInputEstimateItemCost() {
+        return cy.get('div.items-service.tb-content div.col-cost input')
+    }
+    // Estimate item Tax btn
+    getInputEstimateItemTax() {
+        return cy.get('div.items-service.tb-content div.col-tax.first-field')
+    }
+    // Estimate item Tax list
+    getInputEstimateItemTaxList() {
+        return cy.get('div.items-service.tb-content div.col-tax.first-field ul')
+    }
+    // item Tax 2 btn
+    getInputEstimateItemTax2() {
+        return cy.get('div.items-service.tb-content div.col-tax.second-field')
+    }
+    // Estimate item Tax 2 list
+    getInputEstimateItemTax2List() {
+        return cy.get('div.items-service.tb-content div.col-tax.second-field ul')
+    }
+    // Estimate item cost input
+    getInputEstimateItemQTY() {
+        return cy.get('div.items-service.tb-content div.col-qty input')
+    }
+
+    // Estimate description
+    getInputEstimateItemDescription() {
+        return cy.get('div.form-add-estimate div.DraftEditor-editorContainer')
+
+    }
+    // Estimate Discount
+    getInputEstimateItemDiscount() {
+        return cy.get('div.form-add-estimate div.edit-discount').eq(0).find('div.second-field input')
+    }
+    // Estimate Term
+    getInputEstimateTerm() {
+        return cy.get('div.boxs.--terms-note textarea[name="terms"]')
+    }
+
+    // Estimate Note
+    getInputEstimateNote() {
+        return cy.get('div.boxs.--terms-note:nth-of-type(2) div.notranslate.public-DraftEditor-content')
+    }
+
+
+
+
+    // #endregion Estimate
 
 
     // #region --------------------- Button save ---------------------------------

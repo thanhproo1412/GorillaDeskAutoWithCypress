@@ -13,6 +13,7 @@ export default class CalendarAction {
     }
 
     openModalAddJob(time, jobType) {
+        cy.wait(2000)
         calendarPage.getCalendarTime(time).click({
             force: true
         })
