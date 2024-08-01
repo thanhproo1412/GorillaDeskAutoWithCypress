@@ -31,9 +31,15 @@ export default class JobDetailPage {
         return cy.get('ul[class="tab-selectors"]').contains('Invoice');
     }
     //get btn Add Invoice
-    getNavAddEstimate() {
-        cy.get('ul.tab-selectors > li').contains('Add Invoice');
+    getNavAddInvoice() {
+        return cy.get('ul.tab-selectors > li').contains('Add Invoice');
     }
+    //get btn Material
+    getNavMaterial() {
+        return cy.get('ul.tab-selectors li').contains('Materials');
+
+    }
+
 
 
     //Add button-------------------------
@@ -206,7 +212,7 @@ export default class JobDetailPage {
     // #region --------------------- Estimate section ---------------------------------
     //Get input Estimate item
     getInputEstimateItemService() {
-        return cy.get('div.items-service.tb-content').find('div.search-input input');
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.search-input input');
     }
     //list item load
     getInputEstimateItemServiceListLoadding() {
@@ -222,32 +228,32 @@ export default class JobDetailPage {
     }
     // Estimate item cost input
     getInputEstimateItemCost() {
-        return cy.get('div.items-service.tb-content div.col-cost input')
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.col-cost input')
     }
     // Estimate item Tax btn
     getInputEstimateItemTax() {
-        return cy.get('div.items-service.tb-content div.col-tax.first-field')
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.col-tax.first-field')
     }
     // Estimate item Tax list
     getInputEstimateItemTaxList() {
-        return cy.get('div.items-service.tb-content div.col-tax.first-field ul')
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.col-tax.first-field ul')
     }
     // item Tax 2 btn
     getInputEstimateItemTax2() {
-        return cy.get('div.items-service.tb-content div.col-tax.second-field')
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.col-tax.second-field')
     }
     // Estimate item Tax 2 list
     getInputEstimateItemTax2List() {
-        return cy.get('div.items-service.tb-content div.col-tax.second-field ul')
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.col-tax.second-field ul')
     }
     // Estimate item cost input
     getInputEstimateItemQTY() {
-        return cy.get('div.items-service.tb-content div.col-qty input')
+        return cy.get('div.form-add-estimate div.items-service.tb-content div.col-qty input')
     }
 
     // Estimate description
     getInputEstimateItemDescription() {
-        return cy.get('div.form-add-estimate div.DraftEditor-editorContainer')
+        return cy.get('div.form-add-estimate div.item-note.boxs.dashboard-wrapper div.DraftEditor-editorContainer')
 
     }
     // Estimate Discount
@@ -268,6 +274,84 @@ export default class JobDetailPage {
 
 
     // #endregion Estimate
+
+    // #region --------------------- Material ---------------------------------
+    //Get Add material btn
+    getAddMaterialBtn() {
+        return cy.get('div.action-add-material');
+    }
+    //Get Dropdown Material / EPA # Button
+    getDropdownMaterialBtn() {
+        return cy.get('div.rows.--sm')
+            .contains('Material / EPA #')
+            .closest('div.rows.--sm') // Finds the nearest ancestor with the specified class if necessary
+            .find('div.details.v2-dropdown');
+    }
+    //Get List Material / EPA # 
+    getDropdownMaterialList() {
+        return cy.get('div#show_list_option_dropdow_list_sms_material')
+    }
+    //Get Input Unit Number
+    getInputUnitNumber() {
+        return cy.get('div.details.has-input.field-every input')
+    }
+    //Get Unit Dropdown Button
+    getUnitDropdownBtn() {
+        return cy.get('div.details.has-input.field-every .v2-dropdown')
+    }
+    //Get Unit Dropdown List
+    getUnitDropdownList() {
+        return cy.get('div#show_list_option_dropdow_list_sms_unit')
+    }
+    //Get Input Dilution
+    getInputDilution() {
+        return cy.get('input[name = "dilution"]')
+    }
+    //Get Method Dropdown Button
+    getMethodDropdownBtn() {
+        return cy.get('div.rows.--sm')
+            .contains('Method')
+            .closest('div.rows.--sm') // Finds the nearest ancestor with the specified class if necessary
+            .find('div.details.v2-dropdown');
+    }
+    //Get Method Dropdown List
+    getMethodDropdownList() {
+        return cy.get('div#show_list_option_dropdow_list_sms_method')
+    }
+    //Get Location Dropdown Button
+    getLocationDropdownBtn() {
+        return cy.get('div.form-edit-material div.rows') // Selects all divs with the class 'rows'
+            .contains('Location') // Ensures 'Location' is within divs with the class 'txt'
+            .closest('div.rows') // Finds the nearest ancestor with the class 'rows'
+            .find('div.details.v2-dropdown'); // Finds the dropdown within this context
+    }
+    //Get Location Dropdown List
+    getLocationDropdownList() {
+        return cy.get('div.form-edit-material div.rows')
+            .contains('Location')
+            .closest('div.rows') // Finds the nearest ancestor with the specified class if necessary
+            .find('#show_list_dropdown');
+    }
+    //Get Target Dropdown Button
+    getTargetDropdownBtn() {
+        return cy.get('div.form-edit-material div.rows') // Selects all divs with the class 'rows'
+            .contains('Target')
+            .closest('div.rows') // Finds the nearest ancestor with the class 'rows'
+            .find('div.details.v2-dropdown'); // Finds the dropdown within this context
+    }
+    //Get Target Dropdown List
+    getTargetDropdownList() {
+        return cy.get('div.form-edit-material div.rows')
+            .contains('Target')
+            .closest('div.rows') // Finds the nearest ancestor with the specified class if necessary
+            .find('#show_list_dropdown');
+    }
+    getButtonSaveMaterial() {
+        return cy.get('div.form-edit-material div.v2-btn-main')
+    }
+
+
+    // #endregion Material
 
 
     // #region --------------------- Button save ---------------------------------

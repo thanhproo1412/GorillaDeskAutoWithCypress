@@ -5,7 +5,7 @@ const jobDetailPage = new JobDetailPage()
 
 export default class JobDetailAction {
 
-    // Add new job
+    // #region --------------------- Function Add new job---------------------------------
     addJob(jobData) {
         //select customer
         cy.wait(2000)
@@ -32,12 +32,14 @@ export default class JobDetailAction {
         jobDetailPage.getInputLengthMinutesList().contains(jobData.lengthMinutes).click()
 
     }
+    // #endregion Add new job
 
-    //Add Invoice func
+
+    // #region --------------------- Function Add Invoice---------------------------------
     addInvoice(invoiceData) {
 
         // check the service have invoice or not
-        jobDetailPage.getNavEstimate() ? jobDetailPage.getNavEstimate().click() : jobDetailPage.getNavAddEstimate().click()
+        jobDetailPage.getNavInvoice() ? jobDetailPage.getNavInvoice().click() : jobDetailPage.getNavAddInvoice().click()
 
         //click in search invoice
         jobDetailPage.getInputItemService().click()
@@ -72,13 +74,11 @@ export default class JobDetailAction {
         //input note
         jobDetailPage.getInputInvoiceNote().clear().type(invoiceData.note)
 
-
-
-
     }
+    // #endregion Add Invoice
 
 
-    // Add Estimate func
+    // #region --------------------- Function Add Estimate---------------------------------
     addEstimate(estimateData) {
 
         // check the service have invoice or not
@@ -117,31 +117,80 @@ export default class JobDetailAction {
         //input Invoice
         jobDetailPage.getInputEstimateNote().clear().type(estimateData.note)
 
+    }
+    // #endregion Add Estimate
 
+    // #region --------------------- Function Add Material---------------------------------
+    addMaterial(materialData) {
+
+        // Click in Material Section
+        jobDetailPage.getNavMaterial().click()
+        let i = 0
+        while (i < materialData.data.length) {
+
+            // click Add Material
+            jobDetailPage.getAddMaterialBtn().click()
+
+            jobDetailPage.getDropdownMaterialBtn().click()
+            jobDetailPage.getDropdownMaterialList().contains(materialData.data[i].material).click()
+            jobDetailPage.getInputUnitNumber().clear().type(materialData.data[i].unitQuantity)
+            jobDetailPage.getUnitDropdownBtn().click()
+            jobDetailPage.getUnitDropdownList().contains(materialData.data[i].unitName).click()
+            jobDetailPage.getInputDilution().clear().type(materialData.data[i].Dilution)
+            jobDetailPage.getMethodDropdownBtn().click()
+            jobDetailPage.getMethodDropdownList().contains(materialData.data[i].method).click()
+
+            // click dropdown Location
+            jobDetailPage.getLocationDropdownBtn().click()
+            for (let j = 0; j < materialData.data[i].location.length; j++) {
+                jobDetailPage.getLocationDropdownList().contains(materialData.data[i].location[j]).click()
+            }
+            // close dropdown
+            jobDetailPage.getLocationDropdownBtn().click()
+            // click dropdown Target
+            jobDetailPage.getTargetDropdownBtn().click()
+            for (let j = 0; j < materialData.data[i].target.length; j++) {
+                jobDetailPage.getTargetDropdownList().contains(materialData.data[i].target[j]).click()
+            }
+            // click Save Material
+            jobDetailPage.getButtonSaveMaterial().click()
+            i++
+
+
+        }
+
+
+
+
+
+
+
+        // jobDetailPage.getInputEstimateItemCost().clear().type(estimateData.cost)
 
     }
+    // #endregion Add Estimate
 
-    //Click save job
+
+    // #region --------------------- Function Save Job---------------------------------
     saveJob() {
-
         //click save
         jobDetailPage.getBtnSave().click()
-
     }
+    // #endregion Save Job
 
-    // Close Job
+
+    // #region --------------------- Function Close Job---------------------------------
     closeJob() {
-
         // wait for job saved
         jobDetailPage.getLoaddingAfterAddJob().should('exist')
         jobDetailPage.getLoaddingAfterAddJob().should('not.exist')
-
         //click close
         jobDetailPage.getBtnClose().click()
-
     }
+    // #endregion Close Job
 
-    // Select date
+
+    // #region --------------------- Function Select JobDetail date---------------------------------
     selectDate(date) {
 
         const newDate = new Date(date)
@@ -166,6 +215,7 @@ export default class JobDetailAction {
         jobDetailPage.getSelectDateList().contains(d).click()
 
     }
+    // #endregion Select JobDetail date
 
 
 }

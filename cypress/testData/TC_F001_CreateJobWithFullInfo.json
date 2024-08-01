@@ -1,0 +1,98 @@
+{
+    "time": "10:00:00",
+    "jobType": "New Job",
+    "newJob": {
+        "customer": "thanh nguyen",
+        "location": "7741 Hayvenhurst Avenue",
+        "service": "TN_Service",
+        "date": "23 April 2024",
+        "time": "07:30 AM",
+        "lengthHours": "1",
+        "lengthMinutes": "30"
+    },
+    "invoice": {
+        "item": "invoice item",
+        "description": "invoice description by auto tool",
+        "cost": "10000",
+        "tax": "10",
+        "tax2": "10",
+        "qty": "2",
+        "discount": "15",
+        "term": "term by auto tool",
+        "note": "note by auto tool",
+        "noteTemplate": ""
+    },
+    "estimate": {
+        "item": "estimate item",
+        "description": "estimate description by auto tool",
+        "cost": "10000",
+        "tax": "10",
+        "tax2": "10",
+        "qty": "2",
+        "discount": "15",
+        "term": "term by auto tool",
+        "note": "note by auto tool",
+        "noteTemplate": ""
+    },
+    "material": {
+        "data": [
+            {
+                "material": "Pro Control Pop Top aero 3.3%",
+                "unitQuantity": "6.00",
+                "unitName": "stations",
+                "Dilution": "Using C1V1 = C2V2",
+                "method": "Rodent Station",
+                "location": [
+                    "Bathroom(s)",
+                    "Utility or Storage Closet",
+                    "Wall Voids",
+                    "Cabinets",
+                    "Crawl Space"
+                ],
+                "target": [
+                    "Scorpions",
+                    "Roof Rats",
+                    "Field Mice"
+                ]
+            },
+            {
+                "material": "Pro Control Pop Top aero 3.3%",
+                "unitQuantity": "6.00",
+                "unitName": "stations",
+                "Dilution": "Using C1V1 = C2V2",
+                "method": "Rodent Station",
+                "location": [
+                    "Bathroom(s)",
+                    "Utility or Storage Closet",
+                    "Wall Voids",
+                    "Cabinets",
+                    "Crawl Space"
+                ],
+                "target": [
+                    "Scorpions",
+                    "Roof Rats",
+                    "Field Mice"
+                ]
+            },
+            {
+                "material": "Pro Control Pop Top aero 3.3%",
+                "unitQuantity": "6.00",
+                "unitName": "stations",
+                "Dilution": "Using C1V1 = C2V2",
+                "method": "Rodent Station",
+                "location": [
+                    "Bathroom(s)",
+                    "Utility or Storage Closet",
+                    "Wall Voids",
+                    "Cabinets",
+                    "Crawl Space"
+                ],
+                "target": [
+                    "Scorpions",
+                    "Roof Rats",
+                    "Field Mice"
+                ]
+            }
+        ]
+    }
+}

@@ -25,7 +25,7 @@ describe('Create Job', () => {
     jobDetailAction.addJob(jobData.newJob)
     jobDetailAction.addEstimate(jobData.estimate)
 
-    // jobDetailAction.saveJob()
+    jobDetailAction.saveJob()
     // jobDetailAction.closeJob()
 
 
