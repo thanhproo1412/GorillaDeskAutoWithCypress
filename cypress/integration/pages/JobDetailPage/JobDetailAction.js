@@ -13,7 +13,8 @@ export default class JobDetailAction {
         jobDetailPage.getCustomerInList(jobData.customer).click()
 
         //select location
-        jobDetailPage.getLocation().type(jobData.location)
+        // jobDetailPage.getLocation().type(jobData.location)
+        jobDetailPage.getLocation().click()
         jobDetailPage.getLocationInList(jobData.location).click()
 
         //select service

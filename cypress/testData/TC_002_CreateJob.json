@@ -2,7 +2,7 @@
     "time": "10:00:00",
     "jobType": "New Job",
     "newJob": {
-        "customer": "Thanh Nguyen",
+        "customer": "thanh nguyen",
         "location": "7741 Hayvenhurst Avenue",
         "service": "TN_Service",
         "date": "23 April 2024",

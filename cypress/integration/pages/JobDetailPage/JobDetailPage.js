@@ -147,7 +147,7 @@ export default class JobDetailPage {
     // #region --------------------- Invoice section ---------------------------------
     //Get btn Add Document - Open DocList
     getInputItemService() {
-        return cy.get('div.items-service.tb-content').find('div.search-input input');
+        return cy.get('div#tab_inoive_detail_setting  div.items-service.tb-content div.search-input input');
     }
     //list Invoice item load
     getInputItemServiceListLoadding() {
@@ -163,47 +163,47 @@ export default class JobDetailPage {
     }
     // item cost input
     getInputItemCost() {
-        return cy.get('div.items-service.tb-content div.col-cost input')
+        return cy.get('div#tab_inoive_detail_setting div.items-service.tb-content div.col-cost input')
     }
     // Invoice Tax btn
     getInputItemTax() {
-        return cy.get('div.items-service.tb-content div.col-tax.first-field')
+        return cy.get('div#tab_inoive_detail_setting div.items-service.tb-content div.col-tax.first-field')
     }
     // Invoice Tax list
     getInputItemTaxList() {
-        return cy.get('div.items-service.tb-content div.col-tax.first-field ul')
+        return cy.get('div#tab_inoive_detail_setting div.items-service.tb-content div.col-tax.first-field ul')
     }
     // Invoice Tax 2 btn
     getInputItemTax2() {
-        return cy.get('div.items-service.tb-content div.col-tax.second-field')
+        return cy.get('div#tab_inoive_detail_setting div.items-service.tb-content div.col-tax.second-field')
     }
     // Invoice Tax 2 list
     getInputItemTax2List() {
-        return cy.get('div.items-service.tb-content div.col-tax.second-field ul')
+        return cy.get('div#tab_inoive_detail_setting div.items-service.tb-content div.col-tax.second-field ul')
     }
     // Invoice cost input
     getInputItemQTY() {
-        return cy.get('div.items-service.tb-content div.col-qty input')
+        return cy.get('div#tab_inoive_detail_setting div.items-service.tb-content div.col-qty input')
     }
 
     // Invoice description
     getInputItemDescription() {
-        return cy.get('div.item-note.boxs.dashboard-wrapper .public-DraftStyleDefault-block')
+        return cy.get('div#tab_inoive_detail_setting div.item-note.boxs.dashboard-wrapper .public-DraftStyleDefault-block')
     }
 
     // Invoice Term
     getInputInvoiceTerm() {
-        return cy.get('div.boxs.--terms-note textarea[name="terms"]')
+        return cy.get('div#tab_inoive_detail_setting div.boxs.--terms-note textarea[name="terms"]')
     }
 
     // Invoice Note
     getInputInvoiceNote() {
-        return cy.get('div.boxs.--terms-note:nth-of-type(2) div.notranslate.public-DraftEditor-content')
+        return cy.get('div#tab_inoive_detail_setting div.boxs.--terms-note:nth-of-type(2) div.notranslate.public-DraftEditor-content')
     }
 
     //  Invoice discount
     getInputInvoiceDiscount() {
-        return cy.get('div.edit-discount input.field-input')
+        return cy.get('div#tab_inoive_detail_setting div.edit-discount input.field-input')
     }
 
 
