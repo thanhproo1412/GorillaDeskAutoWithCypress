@@ -358,7 +358,7 @@ export default class JobDetailPage {
 
     //Btn Save
     getBtnSave() {
-        return cy.get('div[class="v2-btn-main "]')
+        return cy.get('div .footer-modal.btn-close .v2-btn-main')
     }
 
     //Btn Close
