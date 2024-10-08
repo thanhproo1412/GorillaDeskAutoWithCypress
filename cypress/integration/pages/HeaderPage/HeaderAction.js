@@ -1,4 +1,4 @@
-import getMonthName from '../../function/GetMonthName.js'
+import "cypress-real-events";
 import HeaderPage from './HeaderPage.js';
 
 const headerPage = new HeaderPage()
@@ -9,7 +9,7 @@ export default class HeaderAction {
     openNewCustomer(jobData) {
         //select customer
         cy.wait(2000)
-        headerPage.getBtnAdd().trigger('mouseover')
+        headerPage.getBtnAdd().should('be.visible').realClick()
         headerPage.getMenuItemNewLead().click()
 
     }

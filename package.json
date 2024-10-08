@@ -19,6 +19,7 @@
     "report": "cypress run  --reporter-options configFile=reporterConfig.json"
   },
   "dependencies": {
+    "cypress-real-events": "^1.13.0",
     "wait-on": "^7.2.0"
   }
 }
