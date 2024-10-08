@@ -5,7 +5,7 @@ const headerPage = new HeaderPage()
 
 export default class HeaderAction {
 
-    // #region --------------------- Function Add new job---------------------------------
+    // #region --------------------- Function Open New Customer---------------------------------
     openNewCustomer(jobData) {
         //select customer
         cy.wait(2000)
@@ -13,7 +13,7 @@ export default class HeaderAction {
         headerPage.getMenuItemNewLead().click()
 
     }
-    // #endregion Add new job
+    // #endregion Function Open New Customer
 
 
 }

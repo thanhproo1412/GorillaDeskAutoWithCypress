@@ -5,8 +5,6 @@ import privateData from '../../testData/PrivateData.json';
 import jobData from '../../testData/TC_003_CreateJobWithInvoice.json';
 
 
-console.log(privateData)
-
 describe('Create Job', () => {
   it('Just create a new job in calendar', () => {
 
