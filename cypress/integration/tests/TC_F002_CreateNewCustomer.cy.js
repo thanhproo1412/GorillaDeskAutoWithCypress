@@ -3,13 +3,27 @@ import HeaderAction from '../pages/HeaderPage/HeaderAction';
 import NewCustomerAction from '../pages/Common/NewCustomerPage/NewCustomerAction';
 import privateData from '../../testData/PrivateData.json';
 import data from '../../testData/TC_F002_CreateNewCustomer.json';
+import writeJsonFile from './../../integration/function/writeJsonFile';
 
 describe('Create Job', () => {
   it('Just create a new job in calendar', () => {
-    // Navigate to home page
+    // Optionally, if you want to modify or use the data after adding the customer
+    const newCustomerData = {
+      name: data.name, // Example of how to pull in data from the original object
+    };
+
+    writeJsonFile('cypress/ExpectedData/TC_F002_CreateNewCustomer.json',newCustomerData)
+
+    // // Write the new customer data to a JSON file
+    // cy.writeFile('../../expectedData/TC_F002_CreateNewCustomer.json', newCustomerData, { encoding: 'utf-8' })
+    //   .then(() => {
+    //     cy.log('File written successfully');
+    //   });
+
+    // Navigate to the home page
     cy.visit(privateData.url);
 
-    // Navigate to AB Testing page
+    // Login
     const loginAction = new LoginAction();
     loginAction.login(privateData.username, privateData.password);
 
@@ -17,21 +31,8 @@ describe('Create Job', () => {
     const headerAction = new HeaderAction();
     headerAction.openNewCustomer();
 
-    // Add new customer
+    // Add a new customer
     const newCustomerAction = new NewCustomerAction();
     newCustomerAction.AddNewCustomer(data);
-
-    // Optionally, if you want to modify or use the data after adding the customer
-    const newCustomerData = {
-      // You can structure this object however you need
-      name: data.name, // Example of how to pull in data from the original object
-      // Add other customer details here as necessary
-    };
-
-    // Write the new customer data to a JSON file
-    cy.writeFile('../../expectedData/TC_F002_CreateNewCustomer.json', newCustomerData)
-      .then(() => {
-        cy.log('File written successfully');
-      });
   });
 });

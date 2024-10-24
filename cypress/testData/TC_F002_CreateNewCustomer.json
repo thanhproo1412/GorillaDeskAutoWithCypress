@@ -151,9 +151,21 @@
                 "billingEmail": "randomBillingEmail@yopmail.com"
             }
         ],
-        "messaging": "ActiveCustomer",
-        "billToAddressZip": "ActiveCustomer",
-        "billToAddressZip": "ActiveCustomer",
-        "company": "ActiveCustomer"
+        "messaging": {
+            "smsTo": [
+                "0934 567 890",
+                "0934 567 893"
+            ],
+            "emailTo": [
+                "randomEmailTo@yopmail.com",
+                "randomEmailTo@yopmail.com",
+                "randomEmailTo@yopmail.com"
+            ],
+            "confirmations": "Off",
+            "reminders": "Email",
+            "followups": "SMS",
+            "broadcasts": "Both",
+            "latePaymentReminders": "Both"
+        }
     }
 }
