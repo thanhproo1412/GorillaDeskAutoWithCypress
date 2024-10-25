@@ -3,7 +3,6 @@ import NewCustomerPage from './NewCustomerPage.js';
 
 
 const newCustomerPage = new NewCustomerPage()
-const randomID = Math.floor(Math.random() * 100000001);
 
 export default class NewCustomerAction {
 
@@ -12,7 +11,14 @@ export default class NewCustomerAction {
 
         newCustomerPage.DropdownStatusBtn().click()
         newCustomerPage.DropdownStatusItem(data.newCustomer.status).click()
-        newCustomerPage.InputAccountNumber().type(randomID)
+        newCustomerPage.InputAccountNumber().clear().type(data.newCustomer['account#'])
+        newCustomerPage.InputFirstName().clear().type(data.newCustomer.firstName)
+        newCustomerPage.InputLastName().clear().type(data.newCustomer.lastName)
+        newCustomerPage.InputTitle().clear().type(data.newCustomer.title)
+        newCustomerPage.InputEmail().clear().type(data.newCustomer.email)
+        newCustomerPage.InputCompany().clear().type(data.newCustomer.company)
+        newCustomerPage.InputAddressName().clear().type(data.newCustomer.company)
+        newCustomerPage.InputLocationNote().clear().type(data.newCustomer.locationNote)
 
     }
     // #endregion Add new job

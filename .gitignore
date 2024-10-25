@@ -4,3 +4,4 @@ cypress/testData/PrivateData.json
 cypress/screenshots/
 
 
+/cypress/ExpectedData

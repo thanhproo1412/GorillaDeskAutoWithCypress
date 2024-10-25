@@ -2,26 +2,29 @@ import LoginAction from '../pages/LoginPage/LoginAction';
 import HeaderAction from '../pages/HeaderPage/HeaderAction';
 import NewCustomerAction from '../pages/Common/NewCustomerPage/NewCustomerAction';
 import privateData from '../../testData/PrivateData.json';
-import data from '../../testData/TC_F002_CreateNewCustomer.json';
-import writeJsonFile from './../../integration/function/writeJsonFile';
+import data from '../../testData/TestData_TC_F002_CreateNewCustomer.json';
+import { generateRandom20DigitNumber } from '../function/Random';
 
 describe('Create Job', () => {
   it('Just create a new job in calendar', () => {
-    // Optionally, if you want to modify or use the data after adding the customer
-    const newCustomerData = {
-      name: data.name, // Example of how to pull in data from the original object
-    };
+    // Generate random ID
+    const random_id = generateRandom20DigitNumber();
 
-    writeJsonFile('cypress/ExpectedData/TC_F002_CreateNewCustomer.json',newCustomerData)
+    const testDataFilename = 'cypress/testData/TestData_TC_F002_CreateNewCustomer.json'
+    const expectedFilename = 'cypress/ExpectedData/Expected_TC_F002_CreateNewCustomer.json'
 
-    // // Write the new customer data to a JSON file
-    // cy.writeFile('../../expectedData/TC_F002_CreateNewCustomer.json', newCustomerData, { encoding: 'utf-8' })
-    //   .then(() => {
-    //     cy.log('File written successfully');
-    //   });
+    cy.readFile(testDataFilename, 'utf8').then((fileData) => {
+      fileData.newCustomer['account#'] = random_id;
+      cy.writeFile(expectedFilename, fileData).then(() => {
+        cy.log('Updated Data Written Successfully');
+        cy.log(fileData.newCustomer['account#']);
+      });
+    });
 
-    // Navigate to the home page
-    cy.visit(privateData.url);
+    data.newCustomer['account#'] = random_id;
+
+    // Proceed with the rest of the test after ensuring the file update is complete
+    cy.visit(privateData.url, { timeout: 60000 });
 
     // Login
     const loginAction = new LoginAction();
