@@ -19,6 +19,9 @@ export default class NewCustomerAction {
         newCustomerPage.InputCompany().clear().type(data.newCustomer.company)
         newCustomerPage.InputAddressName().clear().type(data.newCustomer.company)
         newCustomerPage.InputLocationNote().clear().type(data.newCustomer.locationNote)
+        newCustomerPage.InputServiceAddress().clear().type(data.newCustomer.serviceAddress)
+
+        
 
     }
     // #endregion Add new job

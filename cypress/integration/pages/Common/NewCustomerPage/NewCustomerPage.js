@@ -66,6 +66,11 @@ export default class NewCustomerPage {
         return cy.get('#add_new_customer .rows').contains('Location Note').closest('.rows').find('textarea');
     }
 
+    //input Service Address
+    InputServiceAddress() {
+        return cy.get('#add_new_customer .rows').contains('Service Address').closest('.rows').find('.rows__field input');
+    }
+
 
 
 }
