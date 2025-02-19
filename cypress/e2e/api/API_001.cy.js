@@ -2,6 +2,7 @@ describe("API Testing - GDesk", () => {
   let token;
   let job_id;
 
+  // #region --------------------- Login---------------------------------
   before(() => {
     cy.request("POST", "https://apiv2.gdesk.io/api/auth/login", {
       username: "acc435@yopmail.com",
@@ -11,7 +12,9 @@ describe("API Testing - GDesk", () => {
       token = response.body.token; // save login token
     });
   });
+  // #endregion ----------------------------------------------------------
 
+  // #region --------------------- Add new job---------------------------------
   it("Create a new job", () => {
     cy.request({
       method: "POST",
@@ -113,13 +116,16 @@ describe("API Testing - GDesk", () => {
       job_id = response.body.data.id;
     });
   });
+  // #endregion ----------------------------------------------------------
 
+
+  // #region --------------------- Update status job---------------------------------
   it("Wait 5 seconds then update job status", () => {
-    cy.wait(5000); // Chờ 5 giây
+    cy.wait(5000); // wait 5 seconds
 
     cy.request({
       method: "PUT",
-      url: `https://apiv2.gdesk.io/api/jobs/${job_id}/status`, // Sử dụng job_id từ API trước
+      url: `https://apiv2.gdesk.io/api/jobs/${job_id}/status`, // use job_id when create job
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -136,6 +142,7 @@ describe("API Testing - GDesk", () => {
       cy.log("Updated Job Status:", JSON.stringify(response.body, null, 2));
     });
   });
+  // #endregion ----------------------------------------------------------
 
 
 });
