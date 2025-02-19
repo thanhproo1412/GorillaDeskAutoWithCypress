@@ -1,5 +1,5 @@
 import CalendarPage from './CalendarPage.js'
-import getMonthName from '../../function/GetMonthName.js'
+// import getMonthName from '../../supportFunction/GetMonthName.js'
 
 const calendarPage = new CalendarPage()
 

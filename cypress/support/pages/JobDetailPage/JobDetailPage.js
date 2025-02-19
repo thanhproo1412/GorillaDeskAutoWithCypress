@@ -90,7 +90,7 @@ export default class JobDetailPage {
         return cy.get('div[id="show_list_services"] div[class="v2-dropdown__menu content-full scrolls"]');
     }
     getServiceInList(name) {
-        return cy.get('div[id="show_list_services"] div[class="v2-dropdown__menu content-full scrolls"]').contains(name);
+        return cy.get('div[id="show_list_services"] div[class="v2-dropdown__menu content-full content-checked has-tab"]').contains(name);
     }
 
 
@@ -193,7 +193,7 @@ export default class JobDetailPage {
 
     // Invoice Term
     getInputInvoiceTerm() {
-        return cy.get('div#tab_inoive_detail_setting div.boxs.--terms-note textarea[name="terms"]')
+        return cy.get('div#tab_inoive_detail_setting div.boxs.--terms-note div.notranslate').first()
     }
 
     // Invoice Note
@@ -262,7 +262,7 @@ export default class JobDetailPage {
     }
     // Estimate Term
     getInputEstimateTerm() {
-        return cy.get('div.boxs.--terms-note textarea[name="terms"]')
+        return cy.get('div.boxs.--terms-note div.notranslate').first()
     }
 
     // Estimate Note

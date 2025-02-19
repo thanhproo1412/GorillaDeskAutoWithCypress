@@ -1,5 +1,5 @@
-import LoginAction from '../pages/LoginPage/LoginAction';
-import privateData from '../../testData/PrivateData.json'; // Assuming login.json is in testData folder
+import LoginAction from '../../support/pages/LoginPage/LoginAction';
+import privateData from '../../fixtures/testData/PrivateData.json';
 
 for (let i = 0; i < 1; i++) {
 

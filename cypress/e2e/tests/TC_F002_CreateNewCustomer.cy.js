@@ -1,7 +1,7 @@
-import LoginAction from '../pages/LoginPage/LoginAction';
-import HeaderAction from '../pages/HeaderPage/HeaderAction';
-import NewCustomerAction from '../pages/Common/NewCustomerPage/NewCustomerAction';
-import privateData from '../../testData/PrivateData.json';
+import LoginAction from '../../support/pages/LoginPage/LoginAction';
+import HeaderAction from '../../support/pages/HeaderPage/HeaderAction';
+import NewCustomerAction from '../../support/pages/Common/NewCustomerPage/NewCustomerAction';
+import privateData from '../../fixtures/testData/PrivateData.json';
 import { generateRandom20DigitNumber } from '../function/Random';
 
 describe('Create Job', () => {

@@ -1,0 +1,171 @@
+{
+  "newCustomer": {
+    "status": "Active Customer",
+    "account#": 85898407194576180000,
+    "firstName": "CusFirstName",
+    "lastName": "CusLastName",
+    "title": "This is the title of customer added by test automation",
+    "email": "CustomerEmail@yopmail.com",
+    "company": "ActiveCustomer",
+    "customerPhone": [
+      {
+        "phoneNumber": "randomPhoneNumber",
+        "phoneType": "Mobile"
+      },
+      {
+        "phoneNumber": "randomPhoneNumber",
+        "phoneType": "Home"
+      },
+      {
+        "phoneNumber": "randomPhoneNumber",
+        "phoneType": "Home Fax"
+      },
+      {
+        "phoneNumber": "randomPhoneNumber",
+        "phoneType": "New Type"
+      }
+    ],
+    "source": "How did you hear about us?",
+    "Tags": "AutomationTag",
+    "additionalContacts": [
+      {
+        "firstName": "ContactFirstName",
+        "lastName": "ContactFirstName",
+        "title": "This is the title of cus's contact added by test automation",
+        "email": "ContactEmail@yopmail.com",
+        "customerPhone": [
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Mobile"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home Fax"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "New Type"
+          }
+        ]
+      },
+      {
+        "firstName": "ContactFirstName",
+        "lastName": "ContactFirstName",
+        "title": "This is the title of cus's contact added by test automation",
+        "email": "ContactEmail@yopmail.com",
+        "customerPhone": [
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Mobile"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home Fax"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "New Type"
+          }
+        ]
+      },
+      {
+        "firstName": "ContactFirstName",
+        "lastName": "ContactFirstName",
+        "title": "This is the title of cus's contact added by test automation",
+        "email": "ContactEmail@yopmail.com",
+        "customerPhone": [
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Mobile"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home Fax"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "New Type"
+          }
+        ]
+      },
+      {
+        "firstName": "ContactFirstName",
+        "lastName": "ContactFirstName",
+        "title": "This is the title of cus's contact added by test automation",
+        "email": "ContactEmail@yopmail.com",
+        "customerPhone": [
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Mobile"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "Home Fax"
+          },
+          {
+            "phoneNumber": "randomPhoneNumber",
+            "phoneType": "New Type"
+          }
+        ]
+      }
+    ],
+    "address Name": "ActiveCustomer",
+    "addressTo": "ActiveCustomer",
+    "serviceAddress": "ActiveCustomer",
+    "serviceAddress2": "ActiveCustomer",
+    "serviceAddressCity": "ActiveCustomer",
+    "serviceAddressST": "ActiveCustomer",
+    "serviceAddressZip": "ActiveCustomer",
+    "billingAddress": "false",
+    "billTo": "ActiveCustomer",
+    "billToAddress": "ActiveCustomer",
+    "billToAddress2": "ActiveCustomer",
+    "billToAddressCity": "ActiveCustomer",
+    "billToAddressST": "ActiveCustomer",
+    "locationNote": "This is customer's location note",
+    "locationTags": "AutomationTag",
+    "billingEmail": [
+      {
+        "billingEmail": "randomBillingEmail@yopmail.com"
+      },
+      {
+        "billingEmail": "randomBillingEmail@yopmail.com"
+      },
+      {
+        "billingEmail": "randomBillingEmail@yopmail.com"
+      }
+    ],
+    "messaging": {
+      "smsTo": [
+        "0934 567 890",
+        "0934 567 893"
+      ],
+      "emailTo": [
+        "randomEmailTo@yopmail.com",
+        "randomEmailTo@yopmail.com",
+        "randomEmailTo@yopmail.com"
+      ],
+      "confirmations": "Off",
+      "reminders": "Email",
+      "followups": "SMS",
+      "broadcasts": "Both",
+      "latePaymentReminders": "Both"
+    }
+  }
+}

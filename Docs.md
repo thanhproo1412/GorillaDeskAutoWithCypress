@@ -11,7 +11,8 @@ npm i
 npm install cypress
 
 4. Create File PrivateData.json in Cypress/TestData/PrivateData.json
-   File PrivateData.json: {
+   File PrivateData.json: 
+   {
    "url": "url",
    "username": "username",
    "password": "password"

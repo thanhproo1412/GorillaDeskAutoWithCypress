@@ -1,8 +1,8 @@
-import LoginAction from '../pages/LoginPage/LoginAction';
-import CalendarAction from '../pages/CalendarPage/CalendarAction';
-import JobDetailAction from '../pages/JobDetailPage/JobDetailAction';
-import privateData from '../../testData/PrivateData.json';
-import jobData from '../../testData/TC_002_CreateJob.json';
+import LoginAction from '../../support/pages/LoginPage/LoginAction';
+import CalendarAction from '../../support/pages/CalendarPage/CalendarAction';
+import JobDetailAction from '../../support/pages/JobDetailPage/JobDetailAction';
+import privateData from '../../fixtures/testData/PrivateData.json';
+import jobData from '../../fixtures/testData/TC_004_CreateJobWithEstimate.json';
 
 
 console.log(privateData)
@@ -23,8 +23,10 @@ describe('Create Job', () => {
     calendarAction.selectAgendar('Day')
     calendarAction.openModalAddJob(jobData.time, jobData.jobType)
     jobDetailAction.addJob(jobData.newJob)
+    jobDetailAction.addEstimate(jobData.estimate)
+
     jobDetailAction.saveJob()
-    jobDetailAction.closeJob()
+    // jobDetailAction.closeJob()
 
 
 

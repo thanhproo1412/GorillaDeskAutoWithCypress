@@ -1,8 +1,8 @@
-import LoginAction from '../pages/LoginPage/LoginAction';
-import CalendarAction from '../pages/CalendarPage/CalendarAction';
-import JobDetailAction from '../pages/JobDetailPage/JobDetailAction';
-import privateData from '../../testData/PrivateData.json';
-import jobData from '../../testData/TC_003_CreateJobWithInvoice.json';
+import LoginAction from '../../support/pages/LoginPage/LoginAction';
+import CalendarAction from '../../support/pages/CalendarPage/CalendarAction';
+import JobDetailAction from '../../support/pages/JobDetailPage/JobDetailAction';
+import privateData from '../../fixtures/testData/PrivateData.json';
+import jobData from '../../fixtures/testData/TC_003_CreateJobWithInvoice.json';
 
 
 describe('Create Job', () => {
