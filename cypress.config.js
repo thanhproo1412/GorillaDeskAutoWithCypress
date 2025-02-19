@@ -21,6 +21,7 @@ module.exports = defineConfig({
 
 
   e2e: {
+    baseUrl: "https://apiv2.gdesk.io", // URL API
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
