@@ -21,7 +21,7 @@ jobs:
         with:
           name: "PrivateData.json"
           json: ${{ secrets.PRIVATE_DATA }}
-          dir: "cypress/testData/"
+          dir: "cypress/fixtures/testData/"
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
