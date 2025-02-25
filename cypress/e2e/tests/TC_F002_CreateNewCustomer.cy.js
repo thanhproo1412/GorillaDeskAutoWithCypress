@@ -2,15 +2,15 @@ import LoginAction from '../../support/pages/LoginPage/LoginAction';
 import HeaderAction from '../../support/pages/HeaderPage/HeaderAction';
 import NewCustomerAction from '../../support/pages/Common/NewCustomerPage/NewCustomerAction';
 import privateData from '../../fixtures/testData/PrivateData.json';
-import { generateRandom20DigitNumber } from '../function/Random';
+  import { generateRandom20DigitNumber } from '../../support/supportFunction/Random';
 
 describe('Create Job', () => {
   it('Just create a new job in calendar', () => {
     // Generate random ID
     const random_id = generateRandom20DigitNumber();
 
-    const testDataFilename = 'cypress/testData/TestData_TC_F002_CreateNewCustomer.json';
-    const expectedFilename = 'cypress/ExpectedData/Expected_TC_F002_CreateNewCustomer.json';
+    const testDataFilename = 'cypress/fixtures/testData/TestData_TC_F002_CreateNewCustomer.json';
+    const expectedFilename = 'cypress/fixtures/ExpectedData/Expected_TC_F002_CreateNewCustomer.json';
 
     cy.readFile(testDataFilename, 'utf8').then((fileData) => {
       fileData.newCustomer['account#'] = random_id;
